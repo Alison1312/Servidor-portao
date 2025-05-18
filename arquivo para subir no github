@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Versão para deploy no Railway"
+git branch -M main
+git remote add origin https://github.com/Alison1312/servidor-portao.git
+git push -u origin main
