@@ -1,5 +1,27 @@
 let senhaAutorizada = "alison321";
 
+function enviarComando(comando) {
+  fetch('/api/comando', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ comando })
+  })
+  .then(response => {
+    if (!response.ok) throw new Error('Erro ao enviar comando');
+    return response.json();
+  })
+  .then(data => {
+    alert(`Comando enviado: ${comando}`);
+  })
+  .catch(error => {
+    alert('Erro ao enviar comando');
+    console.error(error);
+  });
+}
+
+
 function login() {
   const senha = document.getElementById('senha').value;
   if (senha === senhaAutorizada) {
