@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Portão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Portão - Casa Ramires</h2>
+    <div class="login-box" id="login-box">
+      <input type="password" id="senha" placeholder="Digite a senha" />
+      <button onclick="login()">Entrar</button>
+    </div>
+    <div class="controls hidden" id="controls">
+      <button onclick="acionar()">Abrir/Fechar</button>
+      <button onclick="modoCadastro()">Cadastrar controle</button>
+      <button onclick="acionarLampada()">Ligar Luz</button>
+      <div class="status" id="status">Status: Carregando...</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
