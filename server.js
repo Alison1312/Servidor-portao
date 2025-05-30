@@ -1,4 +1,10 @@
-const express = require('express');
+// Servir arquivos estáticos
+app.use(express.static('public'));
+
+// Rota principal
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
 const app = express();
